@@ -13,7 +13,8 @@ app.use(cors());
 
 
 //connect to mongoose
-mongoose.connect("mongodb+srv://Lynn:lynn062504@cluster0.obzya.mongodb.net/notesDB?retryWrites=true&w=majority"
+const password = process.env.NOTEHERE_DB_PW
+mongoose.connect("mongodb+srv://Lynn:password@cluster0.obzya.mongodb.net/notesDB?retryWrites=true&w=majority"
 , {useNewUrlParser: true, useUnifiedTopology: true})
 
 //data schema & model
